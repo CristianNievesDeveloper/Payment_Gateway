@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200;400;600;800&family=Modak&family=Montserrat:wght@100;200;300;400;500&family=Oi&family=Poppins:wght@100;500&family=Staatliches&family=Titan+One&display=swap');
+
+
+:root{
+    --primer-color: #02c4ff;
+    --segundo-color:#1A1A1A;
+    --tercer-color:#f8f8f8;
+    --cuarto-color:#0082fc;
+    --quinto-color: #ff0101;
+    --sexto-color:#2c2c2c;
+}
+*{
+    font-family:'Montserrat',cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+    
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--segundo-color);
+}
+
+
+
+.container {
+    text-align: center;
+    background-color: var(--sexto-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: var(--tercer-color);
+    text-decoration: underline 4px var(--quinto-color);
+}
+
+p {
+    color: var(--tercer-color);
+}
+
+#total{
+    font-size: 2rem;
+}
+
+.lives-count {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+ #increase-lives-btn, #decrease-lives-btn {
+    background-color: var(--quinto-color);
+    color: #fff;
+    padding: .5rem 2rem;
+    text-align: center;
+    margin: .5rem;
+    justify-content: center;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#buy-life-btn{
+    background-color: var(--cuarto-color);
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#buy-life-btn:hover {
+    background-color: #1f00d1;
+}
+
+#increase-lives-btn:hover, #decrease-lives-btn:hover{
+    background-color: transparent;
+    border: 1px solid var(--quinto-color);
+    transition: ease-out;
+}
+
+.arrow{
+    display: block;
+    height: 5rem;
+}
+
+
+
+
+
+
+
+
+
