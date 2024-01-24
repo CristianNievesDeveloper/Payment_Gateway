@@ -1,3 +1,5 @@
+console.log(total);
+
 // Variables globales
 let buyingLives = 0;
 let totalLives = 0;
@@ -9,6 +11,9 @@ function updateTotal() {
     const total = (buyingLives * pricePerLife).toFixed(2);
     // Actualiza el elemento HTML con el id 'total' con el texto formateado
     document.getElementById('total').innerText = `Total: $${total} USD`;
+
+    // Actualiza el valor del input hidden con el nuevo valor de buyingLives
+    document.getElementById('hidden-amount').value = buyingLives;
 }
 
 
@@ -48,3 +53,5 @@ function disminuirVidas() {
         updateTotal();
     }
 }
+
+

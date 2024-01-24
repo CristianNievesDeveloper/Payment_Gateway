@@ -3,11 +3,11 @@
 
 :root{
     --primer-color: #02c4ff;
-    --segundo-color:#1A1A1A;
+    --segundo-color:#1a1a1a;
     --tercer-color:#f8f8f8;
-    --cuarto-color:#0082fc;
-    --quinto-color: #ff0101;
-    --sexto-color:#2c2c2c;
+    --cuarto-color:#690388;
+    --quinto-color: #cc01ff;
+    --sexto-color:#000000;
 }
 *{
     font-family:'Montserrat',cursive;
@@ -19,7 +19,6 @@
     text-decoration: none;
     text-transform: capitalize;
     transition: .2s linear;
-    
 }
 
 body {
@@ -28,29 +27,119 @@ body {
     padding: 0;
     display: flex;
     align-items: center;
+    align-content: center;
     justify-content: center;
     height: 100vh;
     background-color: var(--segundo-color);
 }
+main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
+/* SECTION NAVBAR----------------------------------------------------------- */
+header{
+    width: 100%;
+    height:5rem ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 6.25rem;
+    position: fixed;
+    z-index: 1000;
+    margin-top: -35rem;
+}
+.nav-bar{ 
+    width: 65rem;
+    height: 4rem;
+    margin-top: .5rem;
+}
 
+.nav-container{
+    width: 65rem;
+    height: 4rem;
+    background: linear-gradient(to right, #c402ff, #ff0281, #1a01ff, #00dffc);
+    border-radius: 5rem;
+    padding: 1.5px;
+}
 
+.nav-container .nav-content{
+    background: var(--segundo-color);
+    border-radius: 5rem;
+    width: 100%;
+    height: 100%;
+}
+
+.hamburger{
+    display: none;
+}
+.nav-bar ul{
+    display: flex;
+    list-style: none;
+    font-family: 'Staatliches','cursive' ;
+    align-items: center;
+    justify-content: center;
+}
+.nav-bar ul li a{
+    display: block;
+    color: var(--tercer-color);
+    font-size: 1.5rem;
+    border-radius: 5rem;
+    padding: .6em;
+    text-decoration: none;
+}
+.nav-bar ul li a:hover{
+    text-decoration: underline 1px #c402ff;
+    scale: .9;
+}
+.nav-bar ul li a.active{
+    background-color: #0f03c0;
+    scale: .9;
+}
+
+/* contaner home */
 .container {
+    width: 60rem;
     text-align: center;
-    background-color: var(--sexto-color);
-    padding: 20px;
+    background: linear-gradient(to right, #c402ff, #ff0281, #1a01ff, #00dffc);
+    padding: 5px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+.container .contain{
+    background: var(--sexto-color);
+    padding: 10px;
+} */
+/* .container .contain .values{
+
+} */
+
+#title{
+    padding: .1rem;
     color: var(--tercer-color);
     text-decoration: underline 4px var(--quinto-color);
 }
 
 p {
     color: var(--tercer-color);
+    font-size: 1rem;
+    padding: .5rem;
 }
+
+p span{
+     font-weight: bold;
+}
+
+.total-lives-count{
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* .price{
+   font-size: 40rem;
+} */
 
 #total{
     font-size: 2rem;
@@ -62,14 +151,14 @@ p {
 }
 
  #increase-lives-btn, #decrease-lives-btn {
-    background-color: var(--quinto-color);
+    background-color: transparent;
+    border: 1px solid var(--quinto-color);
     color: #fff;
     padding: .5rem 2rem;
     text-align: center;
     margin: .5rem;
     justify-content: center;
     font-size: 16px;
-    border: none;
     border-radius: 4px;
     cursor: pointer;
 }
@@ -86,13 +175,13 @@ p {
 }
 
 #buy-life-btn:hover {
-    background-color: #1f00d1;
+    background: linear-gradient(to right #000, #4e0166,#c402ff);
 }
 
 #increase-lives-btn:hover, #decrease-lives-btn:hover{
-    background-color: transparent;
-    border: 1px solid var(--quinto-color);
-    transition: ease-out;
+    border:1px solid var(--primer-color);
+    transition: .2s ease-out;
+    box-shadow:0 0 10px #c402ff;
 }
 
 .arrow{
@@ -101,8 +190,50 @@ p {
 }
 
 
+form input.buy {
+    background-color: var(--cuarto-color);
+    transition:background 1s ease;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid var(--cuarto-color);
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+}
 
 
+.buy:hover {
+    border: 2px solid var(--tercer-color);
+    background: #000;
+    transform: scale(1.1);
+    box-shadow:0 0 10px #c402ff;
+}
+
+/* container payment */
+.pay-cont {
+    text-align: center;
+    justify-content: center;
+    width: 50rem;
+    height: 20rem;
+    background: linear-gradient(to right, #c402ff, #ff0281, #1a01ff, #00dffc);
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.pay-cont .pay-conta{
+    background: var(--sexto-color);
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.pay-cont .pay-conta .content h1{
+    padding-top: 1rem;
+}   
 
 
 

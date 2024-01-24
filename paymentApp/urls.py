@@ -8,9 +8,10 @@ from . import views
 
 # Lista de patrones de URL para la aplicación 'paymentApp'.
 urlpatterns = [
+    path('', views.home, name='home'),
     # Ruta para la vista 'payment', sin un segmento específico en la URL.
     # Cuando un usuario accede a la raíz del sitio, se dirigirá a la vista 'payment'.
-    path('', views.payment, name='payment'),
+    path('payment/', views.payment, name='payment'),
 
     # Ruta para la vista 'paypal_return', accesible a través de '/paypal-return'.
     # Se utiliza para manejar el retorno de PayPal después de una transacción exitosa.
