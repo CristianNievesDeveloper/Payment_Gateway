@@ -1,8 +1,8 @@
 from django.urls import path
 from loginApp import views
-
+from allauth.account.views import LogoutView
 urlpatterns = [
     path('', views.index, name='index'),
-    path('logout/', views.account_logout, name='account_logout'),
+    path('logout/', LogoutView.as_view(), name='account_logout'),
     
 ]

@@ -158,7 +158,7 @@ PAYPAL_RECIVER_EMAIL = 'sb-sm1c028659237@business.example.com'
 SITE_ID = 1
 
 LOGIN_REDIRECT_URL = 'home' # Redirecciona a la vista home al loguearse correctamente
-ACCOUNT_LOGOUT_REDIRECT_URL = 'account_logout'
+ACCOUNT_LOGOUT_REDIRECT_URL = 'index'
 LOGOUT_REDIRECT_URL= 'account_logout' #Redirige a login despues de cerrar sesión
 LOGIN_URL = 'index'
 
