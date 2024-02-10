@@ -15,7 +15,7 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+TEMPLATE_DIR = BASE_DIR / "templates/"
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -41,7 +41,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'paymentApp',
+    'loginApp',
+    
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    #proveedor
+    'allauth.socialaccount.providers.google',
 ]
 
 MIDDLEWARE = [
@@ -52,6 +60,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
+     # Add the account middleware:
+    "allauth.account.middleware.AccountMiddleware",
 ]
 
 ROOT_URLCONF = 'django_payment.urls'
@@ -59,7 +70,7 @@ ROOT_URLCONF = 'django_payment.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATE_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -73,6 +84,14 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'django_payment.wsgi.application'
+
+AUTHENTICATION_BACKENDS = [
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by email
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
 
 
 # Database
@@ -134,6 +153,39 @@ PAYPAL_TEST = True
 
 # Dirección de correo electrónico del receptor para transacciones de prueba en PayPal
 PAYPAL_RECIVER_EMAIL = 'sb-sm1c028659237@business.example.com'
+
+#LOGIN-auth google------------------------------------
+SITE_ID = 1
+
+LOGIN_REDIRECT_URL = 'home' # Redirecciona a la vista home al loguearse correctamente
+ACCOUNT_LOGOUT_REDIRECT_URL = 'account_logout'
+LOGOUT_REDIRECT_URL= 'account_logout' #Redirige a login despues de cerrar sesión
+
+# Provider specific settings
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        "SCOPE": [
+            'profile',
+            'email'
+        ],
+        "AUTH_PARAMS":{
+            "access-type":"online"  
+        }
+        # For each OAuth based provider, either add a ``SocialApp``
+        # (``socialaccount`` app) containing the required client
+        # credentials, or list them here:
+        #ESTO LO VAMOS A HACER A NIVEL DE BASE DE DATOS
+        # 'APP': {
+        #     'client_id': '123',
+        #     'secret': '456',
+        #     'key': ''
+        # }
+    }
+}
+
+
+
+
 
 
 

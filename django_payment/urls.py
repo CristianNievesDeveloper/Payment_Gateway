@@ -30,7 +30,11 @@ urlpatterns = [
     path('paypal/', include('paypal.standard.ipn.urls')),
     
     # URL principal de nuestra aplicación, incluimos las URLs definidas en paymentApp.urls
-    path('', include('paymentApp.urls')),
+    path('live/', include('paymentApp.urls')),
+    
+    path('accounts/', include('allauth.urls')),
+
+    path('', include('loginApp.urls')),
 
 ]
 

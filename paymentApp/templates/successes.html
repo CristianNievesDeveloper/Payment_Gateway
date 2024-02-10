@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+<!-- https://developer.paypal.com/docs/checkout/standard/integrate/ paypal-->
+
+{% block content %}
+
+    {% load static %} 
+
+ <main class="main-login">
+        <div class="container-login">
+            <div class="content-login">                  
+                <div class="contain-form">
+                    {% if user.is_authenticated %}
+                        <h2>{{user.username}}</h2>
+                    {% else %}
+                        <h2>hi guest user</h2>
+                        <a href="/accounts/login/">LOGIN</a>
+                    {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock content %} 
