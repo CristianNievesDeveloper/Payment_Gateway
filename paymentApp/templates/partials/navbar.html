@@ -10,10 +10,10 @@
             <div class="nav-content">
                 <ul>
                     <li>
-                        <a href="#">Sign in</a>
+                        {{user.username}}
                     </li>
                     <li>
-                        <a href="#">login</a>
+                        <a href="{% url 'account_logout' %}">Logout</a>
                     </li>
                     <li>
                          <p class="total-lives-count"><i class="fa-regular fa-heart" style="color:#f00; padding: .5rem; font-size: 1.5rem;border-radius: 50%;"></i><span id="lives"> 0</span></p>

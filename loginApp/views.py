@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 # Create your views here.
-def index(request):
+def account_login(request):
     return render(request, "login.html")
 
 def account_logout(request):
