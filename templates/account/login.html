@@ -1,90 +1,46 @@
-<!-- https://developer.paypal.com/docs/checkout/standard/integrate/ paypal-->
-
-
-    {% comment %}
 {% extends 'layout.html' %}
-
+    {% load socialaccount %}
     {% block content %}
+        {% load static %}
 
-    {% load static %}
-{% endblock content %} 
-{% endcomment %}
-
-{% comment %} {% if user.is_authenticated %}
-<h2>Welcome back, {{user.username}}!</h2><br/>
-<h4>thanks you</h4>
-        <a href="{% url 'account_logout' %}">Logout</a>
-{% else %}
-<h2>hi guest user</h2>
-<h4>Please login to continue</h4>
-<a href="/accounts/login">login</a>
-{% endif %} {% endcomment %}
-
-<!-- {% include 'blog/index.html'%} -->
-{% load socialaccount %}
-{% block content %}
-
-<div class="m-auto w-[90%] ">
-    <div class="w-full text-center mb-3">
-        <p>If you have not created an account yet, then please
-            <a class="text-blue-600" href="{{ signup_url }}">sign up</a> first.
-        </p>
-    </div>
-    <div class="w-[50%] m-auto border  rounded-lg">
-        <h1 class=" text-center bg-gray-100 h-[52px] "> <span class="font-bold text-3xl ">Welcome
-                Back</span>
-        </h1>
-
-        <form action="{% url 'account_login' %}" method="POST" class="my-auto">
-            <div class="justify-center mx-3">
-                {% csrf_token %}
-                <div class="w-full border my-3 rounded-lg ">
-                    {{form.login}}
+<main class="main-welcome">
+    <div class="container-welcome">
+        <div class="contain-welcome">
+                <h1 class="title-h1">Welcome</h1>
+                
+                <form action="{% url 'account_login' %}" method="POST" class="contain-form-welcome">
+                    <div class="">
+                        {% csrf_token %}
+                        <div class="form-content">
+                            {{form.login}}
+                        </div>
+        
+                        <div class="form-content">
+                            {{form.password}}
+                        </div>
+                    </div>
+                    <div>
+                        <button type="submit" class="button-submit">Sign In</button>
+                    </div>
+        
+                </form>
+                <div class="contain-button-google">
+                    <a href="{% provider_login_url 'google' %}" class="log_google">
+                        <img src="{% static 'images/google.png' %}" alt="">
+                          Sign in with google
+                    </a>
                 </div>
-
-                <div class="w-full border my-3 rounded-lg">
-
-                    {{form.password}}
-                </div>
-
                 <div>
-                    {{form.remember}}
-                    <label for="remember" class="">Remember Me</label>
+                    <p>If you have not created an account yet, then please
+                        <a href="{{ signup_url }}">sign up</a> first.
+                    </p>
                 </div>
+        </div>         
+   </div>
+</main>
 
 
-            </div>
-            <div class="justify-center mx-3">
-                <button class="primaryAction bg-blue-700 text-white rounded-lg w-[100%] my-3 p-2" type="submit">
-                    Sign In
-                </button>
-            </div>
-
-        </form>
-        <div class="justify-center mx-3">
-            <a href="{% provider_login_url 'google' %}">
-                <button class=" bg-red-200 my-3 rounded-lg w-[100%] p-2">
-                    Sign in with google <i class="fa-brands fa-google text-[#e0400b]"></i>
-                </button>
-            </a>
-        </div>
-    </div>
-</div>
 {%endblock%}
-
-
-<style>
-    #id_login,
-    #id_password {
-        width: 100%;
-        height: 40px;
-        border-radius: 6px;
-        outline: none;
-        padding: 0 12px 0 12px;
-        font-size: medium;
-
-    }
-</style>
 
 
 

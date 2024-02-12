@@ -1,18 +1,20 @@
-<!-- {% include 'blog/index.html'%} -->
-
-
-{% block content %}
-<div class="m-auto w-[50%] m-auto border  rounded-lg">
-    <h1 class="text-center bg-gray-100 h-[52px] font-bold text-3xl">Sign In</h1>
-
-
-    <h2 class="text-center my-3">You are about to use third party authentication!
-    </h2>
-    <form method="post">
-        <div class="justify-center mx-3">
-            {% csrf_token %}
-            <button type="submit" class="bg-red-200 my-3 rounded-lg w-[100%] p-2">Continue</button>
+{% extends 'layout.html' %}
+    {% block content %}
+        {% load static %}
+<main class="main-google-account">
+    <div class="container-google-account">
+        <div class="contain-google-account">
+                <h1 class="title-h1">Sign In</h1>
+                <h2>You are about to use third party authentication!
+                </h2>
+                <form method="post">
+                    <div>
+                        {% csrf_token %}
+                        <button type="submit" class="button-submit">Continue</button>
+                    </div>
+                </form>
         </div>
-    </form>
+    </div>
+</main>
+    
     {% endblock %}
-</div>

@@ -6,7 +6,7 @@
     --segundo-color:#1a1a1a;
     --tercer-color:#f8f8f8;
     --cuarto-color:#690388;
-    --quinto-color: #cc01ff;
+    --quinto-color: #ff0178;
     --sexto-color:#000000;
 }
 *{
@@ -36,6 +36,29 @@ main{
     height: 35rem;
     display: flex;
     justify-content: center;
+}
+
+.title-h1{
+    text-decoration: 3px underline var(--quinto-color);
+    padding: 1rem;
+}
+
+
+.button-submit{
+    color: var(--tercer-color);
+    background: var(--quinto-color);
+    border: 1px solid var(--quinto-color);
+    border-radius: 5px;
+    margin:.5rem 0 .5rem 0;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: .5rem;
+}
+
+.button-submit:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0px 10px 22px -3px rgba(255, 0, 76, 0.438);
 }
 
 /* SECTION NAVBAR----------------------------------------------------------- */
@@ -245,6 +268,274 @@ form input.buy {
     color: var(--tercer-color);
     text-decoration: underline 4px var(--quinto-color);
 }
+/*select-login--------*/
+.main-welcome{
+    text-align: center;
+    display: flex;
+}
 
+.container-welcome{
+        margin-top: 7rem;
+        width: 60rem;
+        height: 25rem;
+        text-align: center;
+        background: linear-gradient(to right, #c402ff, #ff0281, #1a01ff, #00dffc);
+        padding: 5px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: var(--tercer-color);
+
+}
+
+.contain-welcome{
+    height: 100%;
+    background: var(--sexto-color);
+    padding: 2rem 0px;
+}
+
+.main-welcome .container-welcome .contain-welcome h2{
+    text-decoration: 3px underline var(--quinto-color);
+    padding: .5rem;
+}
+
+.main-welcome .contain-form-welcome{
+    padding: 1rem 0 1rem 0;
+}
+
+.main-welcome .contain-form-welcome .form-content{
+    padding: .5rem;
+}
+
+.main-welcome .contain-form-welcome .form-content input{
+    text-align: center;
+    background-color: var(--segundo-color);
+    border: none;
+    color: var(--quinto-color);
+    border-radius: .5rem;
+    font-size: 1.2rem;
+}
+
+.main-welcome .contain-form-welcome .form-content input:focus{
+    outline: 1px solid var(--quinto-color);
+}
+
+/* .main-welcome .contain-form-welcome button{
+    color: var(--tercer-color);
+    background: var(--quinto-color);
+    border: 1px solid var(--quinto-color);
+    border-radius: 5px;
+    margin-bottom: .5rem;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: .5rem;
+}
+
+.main-welcome .contain-form-welcome button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0px 10px 22px -3px rgba(255, 0, 76, 0.438);
+} */
+
+.main-welcome .container-welcome .contain-welcome .log_google{
+    background: var(--segundo-color);
+    padding: .8rem;
+    border-radius: .5rem;
+    text-decoration: none;
+    color: var(--tercer-color);
+}
+
+.main-welcome .container-welcome .contain-welcome a{
+    color: var(--quinto-color);
+    text-decoration: none;
+
+}
+
+.main-welcome .container-welcome .contain-welcome .contain-button-google{
+    padding-bottom: 1rem;
+}
+
+.main-welcome .container-welcome .contain-welcome img{
+    width: 1rem;
+    height: 1rem;
+    margin-left: .5rem;
+}
+/* GOOGLE ACOUNT------------ */
+.main-google-account{
+    text-align: center;
+    display: flex;
+}
+
+.container-google-account{
+        margin-top: 7rem;
+        width: 45rem;
+        height: 15rem;
+        text-align: center;
+        background: linear-gradient(to right, #c402ff, #ff0281, #1a01ff, #00dffc);
+        padding: 5px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: var(--tercer-color);
+
+}
+
+.contain-google-account{
+    height: 100%;
+    background: var(--sexto-color);
+    padding: 2rem 0px;
+}
+
+.main-google-account .container-google-account .contain-google-account h2{
+    font-size: 1rem;
+    padding: 1rem;
+}
+/* .main-google-account .contain-google-account button{
+    color: var(--tercer-color);
+    background: var(--quinto-color);
+    border: 1px solid var(--quinto-color);
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: .5rem;
+}
+
+.main-google-account .contain-google-account button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0px 10px 22px -3px rgba(255, 0, 76, 0.438);
+} */
+
+
+/* SIGNUP FORM----------------------------------------------------*/
+
+.main-signup{
+    text-align: center;
+    display: flex;
+}
+
+.container-signup{
+        margin-top: 7rem;
+        width: 45rem;
+        height: 25rem;
+        text-align: center;
+        background: linear-gradient(to right, #c402ff, #ff0281, #1a01ff, #00dffc);
+        padding: 5px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: var(--tercer-color);
+}
+
+.contain-signup{
+    height: 100%;
+    background: var(--sexto-color);
+    padding: 2rem 0px;
+}
+
+.main-signup .contain-signup form input{
+    text-align: center;
+    background-color: var(--segundo-color);
+    border: none;
+    color: var(--quinto-color);
+    border-radius: .5rem;
+    font-size: 1.2rem;
+}
+
+.main-signup .contain-signup form input:focus{
+    outline: 1px solid var(--quinto-color);
+}
+
+.main-signup .contain-signup form .content-form-signup{
+    padding: .5rem;
+}
+
+.main-signup .contain-signup a{
+    color: var(--quinto-color);
+    text-decoration: none;
+}
+
+/* 
+
+
+.main-signup .contain-form form{
+    height: 100%;
+    padding-top: 2rem;
+}
+
+.main-signup .contain-form-signup h2{
+    color: var(--tercer-color);
+    text-decoration: 3px underline var(--quinto-color);
+    padding: .5rem;
+}
+
+.main-signup .contain-form-signup label{
+    color: var(--quinto-color);
+    display: block;
+    padding: .5rem 0 .5rem 0;
+}
+
+.main-signup .contain-form-signup input{
+    color: var(--quinto-color);
+    background: var(--segundo-color);
+    border: 1px solid var(--quinto-color);
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.main-signup .contain-form-signup input:focus{
+    outline: 1px solid var(--quinto-color);
+} */
+
+/* .main-signup .contain-form-signup input p{
+
+} */
+/* 
+.main-signup .contain-form-signup form ul{
+    padding: 1.5rem 0 .5rem 0;
+}
+
+.main-signup .contain-form-signup form ul li{
+    list-style: none;
+    color: var(--tercer-color);
+}
+
+
+.main-signup .contain-form-signup form span{
+    display: flex;
+    justify-content: center;
+    color: var(--tercer-color);
+    padding: 1rem;
+}
+
+.toggle-password{
+    color: var(--quinto-color);
+    background-color: transparent;
+    font-size: 1rem;
+    border: none;
+    margin: .5rem;
+    max-width: 1rem;
+    max-height: 1rem;
+    position: absolute;
+}
+
+.toggle-password i:hover{
+    cursor: pointer;
+}
+
+.contain-button-signup{
+    display: flex;
+    justify-content: center;
+}
+
+.main-signup .contain-form-signup .contain-button-signup input[type*="submit"]{
+    background: var(--quinto-color);
+    color: var(--tercer-color);
+    padding: .5rem;
+}
+
+.main-signup .contain-form-signup .contain-button-signup input[type*="submit"]:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0px 10px 22px -3px rgba(255, 0, 76, 0.438);
+} */
 
 

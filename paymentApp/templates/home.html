@@ -1,6 +1,8 @@
 {% extends 'layout.html' %}
 <!-- https://developer.paypal.com/docs/checkout/standard/integrate/ paypal-->
 
+{% include "partials/navbar.html" %}
+
 {% block content %}
 
     {% load static %}
@@ -39,22 +41,6 @@
         </div>
     
     </main>
-   
-    
     {% endblock content %} 
-    <!-- <div class="container">
-        
-        <h1>Compra de Vidas</h1>
-        <p id="price">Precio por vida: $0.01 USD</p>
-        <p class="buying-lives-count">Vidas para comprar: <span id="buying-lives">0</span></p>
-        <p class="total-lives-count">Vidas que tienes: <span id="lives">0</span> <i class="fa-regular fa-heart" style="color:#f00; padding: .5rem; font-size: 1.5rem;"></i></p>
-        <div class="arrow">
-            <button id="increase-lives-btn" onclick="aumentarVidas()"><i class="fa-solid fa-plus"></i></button>
-            <button id="decrease-lives-btn" onclick="disminuirVidas()"><i class="fa-solid fa-minus"></i></button>
-        </div>
-        <p id="total">Total: $0.00 USD</p>
-
-        <button id="buy-life-btn" onclick="comprarVida()">Pagar con mercado pago</button>
-        <button id="buy-life-btn" onclick="comprarVida()">Pagar con Paypal</button>
-    </div> -->
+  
     
