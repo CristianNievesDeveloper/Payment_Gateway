@@ -55,3 +55,54 @@ function disminuirVidas() {
 }
 
 
+// eyes password-----------------------------------------------
+// function togglePasswordVisibility(passwordId) {
+//     var passwordInput = document.getElementById(passwordId);
+//     var toggleButton = document.querySelector('.toggle-password[data-password="' + passwordId + '"]');
+
+//     if (passwordInput && toggleButton) {
+//         if (passwordInput.type === 'password') {
+//             passwordInput.type = 'text';
+//             toggleButton.classList.remove('fa-eye');
+//             toggleButton.classList.add('fa-eye-slash');
+//         } else {
+//             passwordInput.type = 'password';
+//             toggleButton.classList.remove('fa-eye-slash');
+//             toggleButton.classList.add('fa-eye');
+//         }
+//     } else {
+//         console.error('Element not found.');
+//         console.error('passwordId:', passwordId);
+//         console.error('passwordInput:', passwordInput);
+//         console.error('toggleButton:', toggleButton);
+//     }
+// }
+
+function togglePasswordVisibility(passwordId) {
+    var passwordInput = document.getElementById(passwordId);
+    var toggleButton = document.querySelector('.toggle-password[data-password="' + passwordId + '"]');
+
+    if (passwordInput && toggleButton) {
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            toggleButton.classList.remove('fa-eye');
+            toggleButton.classList.add('fa-eye-slash');
+        } else {
+            passwordInput.type = 'password';
+            toggleButton.classList.remove('fa-eye-slash');
+            toggleButton.classList.add('fa-eye');
+        }
+    } else {
+        console.error('Element not found.');
+        console.error('passwordId:', passwordId);
+        console.error('passwordInput:', passwordInput);
+        console.error('toggleButton:', toggleButton);
+    }
+}
+
+// Añadir un event listener para detectar el foco en el input de contraseña
+document.getElementById('id_password').addEventListener('focus', function() {
+    var toggleButton = document.querySelector('.toggle-password[data-password="id_password"]');
+    toggleButton.classList.remove('hidden-eye');
+});
+

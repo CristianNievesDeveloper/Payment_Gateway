@@ -1,25 +1,24 @@
-{% comment %} <a href="{% url 'index' %}">login</a> {% endcomment %}
-{% comment %} {% include 'blog/index.html'%} {% endcomment %}
-
-
-{% block content %}
-<div class="m-auto w-[50%] m-auto border  rounded-lg">
-  <h1 class="text-center bg-gray-100 h-[52px] font-bold text-3xl">Sign Out</h1>
-
-  <p class="text-center my-3">Are you sure you want to sign out?</p>
-  <div class="justify-center mx-3">
-
-    <form method="post" action="{% url 'account_logout' %}">
-      {% csrf_token %}
-      <div class="">
-        <button type="submit" class="bg-red-200 my-3 rounded-lg w-[100%] p-2">Sign Out</button>
+{% extends 'layout.html' %}
+    {% block content %}
+        {% load static %}
+<main class="main-logout">
+  <div class="container-logout">
+      <div class="contain-logout">
+          <h1 class="title-h1">Sign Out</h1>
+        
+          <p>Are you sure you want to sign out?</p>
+            <form method="post" action="{% url 'account_logout' %}">
+              {% csrf_token %}
+                <button type="submit" class="button-submit">Sign Out</button>
+            </form>
+            {% comment %} <div class="btn-container"> {% endcomment %}
+              <button class="button-submit"><a href="/">Cancel</a></button>
+            {% comment %} </div> {% endcomment %}
       </div>
-    </form>
-    <div class="justify-center ">
-      <button class="bg-blue-700 text-white rounded-lg w-[100%] my-3 p-2"><a href="/">Cancel</a></button>
-    </div>
   </div>
+</main>
+
+
 
   {% endblock %}
 
-</div>

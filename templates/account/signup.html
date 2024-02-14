@@ -24,10 +24,14 @@
           
                 <div class="content-form-signup">
                   {{ form.password1 }}
+                  <button type="button" class="toggle-password fa-regular fa-eye" data-password="id_password1" onclick="togglePasswordVisibility('id_password1')">
+                </button>  
                 </div>
           
                 <div class="content-form-signup">
                   {{ form.password2 }}
+                  <button type="button" class="toggle-password fa-regular fa-eye" data-password="id_password2" onclick="togglePasswordVisibility('id_password2')">
+                </button>
                 </div>
               
                 {% if redirect_field_value %}

@@ -61,6 +61,32 @@ main{
     box-shadow: 0px 10px 22px -3px rgba(255, 0, 76, 0.438);
 }
 
+.toggle-password{
+    color: var(--quinto-color);
+    background-color: transparent;
+    font-size: 1rem;
+    border: none;
+    margin: .5rem;
+    max-width: 1rem;
+    max-height: 1rem;
+    position: absolute;
+}
+
+.toggle-password i:hover{
+    cursor: pointer;
+}
+
+/* Agrega la clase hidden-eye para ocultar inicialmente el ojito */
+.hidden-eye {
+    display: none;
+}
+
+
+/* .btn-container{
+    display: flex;
+    padding: .2rem;
+    justify-content: center;
+} */
 /* SECTION NAVBAR----------------------------------------------------------- */
 header{
     width: 100%;
@@ -453,89 +479,34 @@ form input.buy {
     text-decoration: none;
 }
 
-/* 
-
-
-.main-signup .contain-form form{
-    height: 100%;
-    padding-top: 2rem;
-}
-
-.main-signup .contain-form-signup h2{
-    color: var(--tercer-color);
-    text-decoration: 3px underline var(--quinto-color);
-    padding: .5rem;
-}
-
-.main-signup .contain-form-signup label{
-    color: var(--quinto-color);
-    display: block;
-    padding: .5rem 0 .5rem 0;
-}
-
-.main-signup .contain-form-signup input{
-    color: var(--quinto-color);
-    background: var(--segundo-color);
-    border: 1px solid var(--quinto-color);
-    border-radius: 5px;
+/* LOGOUT----------------------------*/
+.main-logout{
     text-align: center;
-    font-size: 1.2rem;
-}
-.main-signup .contain-form-signup input:focus{
-    outline: 1px solid var(--quinto-color);
-} */
-
-/* .main-signup .contain-form-signup input p{
-
-} */
-/* 
-.main-signup .contain-form-signup form ul{
-    padding: 1.5rem 0 .5rem 0;
-}
-
-.main-signup .contain-form-signup form ul li{
-    list-style: none;
-    color: var(--tercer-color);
-}
-
-
-.main-signup .contain-form-signup form span{
     display: flex;
-    justify-content: center;
+}
+
+.container-logout{
+        margin-top: 7rem;
+        width: 45rem;
+        height: 20rem;
+        text-align: center;
+        background: linear-gradient(to right, #c402ff, #ff0281, #1a01ff, #00dffc);
+        padding: 5px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     color: var(--tercer-color);
-    padding: 1rem;
+
 }
 
-.toggle-password{
-    color: var(--quinto-color);
-    background-color: transparent;
-    font-size: 1rem;
-    border: none;
-    margin: .5rem;
-    max-width: 1rem;
-    max-height: 1rem;
-    position: absolute;
+.contain-logout{
+    height: 100%;
+    background: var(--sexto-color);
+    padding: 2rem 0px;
 }
 
-.toggle-password i:hover{
-    cursor: pointer;
-}
-
-.contain-button-signup{
-    display: flex;
-    justify-content: center;
-}
-
-.main-signup .contain-form-signup .contain-button-signup input[type*="submit"]{
-    background: var(--quinto-color);
+.main-logout .contain-logout a{
     color: var(--tercer-color);
-    padding: .5rem;
+    text-decoration: none;
 }
-
-.main-signup .contain-form-signup .contain-button-signup input[type*="submit"]:hover{
-    cursor: pointer;
-    transform: scale(1.1);
-    box-shadow: 0px 10px 22px -3px rgba(255, 0, 76, 0.438);
-} */
 
 
