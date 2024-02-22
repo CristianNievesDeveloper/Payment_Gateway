@@ -6,6 +6,8 @@ from paypal.standard.forms import PayPalPaymentsForm
 from django.conf import settings
 
 def home(request):
+    if not request.user.is_authenticated:
+        return redirect('accounts/login')
     return render(request,'home.html')
 
 # Vista para procesar el pago

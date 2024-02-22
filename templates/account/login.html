@@ -9,28 +9,16 @@
                 <h1 class="title-h1">Welcome</h1>
                 
                 <form action="{% url 'account_login' %}" method="POST" class="contain-form-welcome">
-                    <div class="">
                         {% csrf_token %}
                         <div class="form-content">
                             {{form.login}}
                         </div>
         
-                        <!-- <div class="form-content">
+                        <div class="form-content">
                             {{form.password}}
                             <button type="button" class="toggle-password fa-regular fa-eye" data-password="id_password" onclick="togglePasswordVisibility('id_password')">
                             </button> 
-                        </div> -->
-
-                        <div class="form-content">
-                            {{ form.password }}
-                            <button type="button" class="toggle-password fa-regular fa-eye hidden-eye" data-password="id_password" onclick="togglePasswordVisibility('id_password')">
-                            </button>
-                            
                         </div>
-                        
-                        
-
-                    </div>
                     <div>
                         <button type="submit" class="button-submit">Sign In</button>
                     </div>

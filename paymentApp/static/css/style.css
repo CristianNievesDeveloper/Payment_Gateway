@@ -76,10 +76,6 @@ main{
     cursor: pointer;
 }
 
-/* Agrega la clase hidden-eye para ocultar inicialmente el ojito */
-.hidden-eye {
-    display: none;
-}
 
 
 /* .btn-container{
